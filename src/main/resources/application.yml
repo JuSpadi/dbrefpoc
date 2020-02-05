@@ -1,0 +1,16 @@
+app:
+  name: "Lys Counter Api"
+  version: "@project.version@"
+
+server:
+  port: ${BOOT_DEV_PORT:10082}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://loyalty:loyalty@localhost:27017/counterPoc2?authSource=admin
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    org.springframework.data.mongodb.repository.Query: DEBUG
